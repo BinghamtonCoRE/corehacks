@@ -85,7 +85,8 @@ div#introText h2,
     margin-bottom: 60px;
 }
 
-div#introText button {
+div#introText button,
+div#signup a {
     padding-left: 70px;
     width: 250px;
     font-family: 'Roboto', sans-serif;
@@ -107,6 +108,15 @@ div#introText button.turningBack {
     background-position: 10px 3px;
 }
 
+div#signup a {
+    background: url('../img/turning_back.png') no-repeat left;
+    background-size: 52px 52px;
+    background-position: 10px 3px;
+    width: 500px;
+    margin-top: 50px;
+    font-size: 24px;
+}
+
 div.navbar-fixed {
     margin-bottom: 60px;
 }
@@ -125,14 +135,76 @@ nav ul li a {
     font-size: 18px;
 }
 
-.container .card {
-    margin-bottom: 100vh;
-    height: calc(100vh - 200px);
+.container .card.enableScroll {
+    overflow-y: auto;
 }
 
-.card.transparent {
+.container .card.largeMargin {
+    margin-bottom: 100vh;
+}
+
+.container .card.smallMargin {
+    margin-bottom: 50px;
+}
+
+.container .card h1.card-text {
+    color: #000;
+    font-size: 28px;
+    text-align: center;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.container .card {
+    height: calc(100vh - 200px);
+    padding: 20px;
+}
+
+.container .card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding: 20px;
+}
+
+span.question {
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    display: block;
+    font-size: 24px;
+}
+
+.container .card .card-title {
+    font-size: 3em!important;
+}
+
+.container .card.transparent {
     background: transparent;
     box-shadow: none;
+}
+
+#footer .shane {
+    position:fixed;
+    background:rgba(0, 0, 0, 0);
+    width:18%;
+    bottom: -18%; 
+    height: auto;
+}        
+
+#footer .bryan {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    position:fixed;
+    background:rgba(0, 0, 0, 0);
+    width:20%;
+    bottom: -1%; 
+    height: auto;
+    right:0%;
 }
 
 div.full-width {

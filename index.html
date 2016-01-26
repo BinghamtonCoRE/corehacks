@@ -45,12 +45,12 @@
                     })).then(function() {
                         var w = $(window).width();
                         var h = $(window).height();
-                        $('button').text('There\'s no turning back...');
+                        $('button').text('There\'s no turning back');
                         $('button').removeClass('join').addClass('turningBack');
                         $('button').width('350');
                         window.setTimeout(function() {
                             window.location.href = 'info.html';
-                        }, 5000);
+                        }, 3000);
                         $('button').off('click').on('click', function() {
                             $.when($('button').fadeOut('slow')).then(function() {
                                 window.location.href = 'info.html';
