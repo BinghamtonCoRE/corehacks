@@ -33,5 +33,47 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                $('button h1 h2').fadeOut('slow');
+                $.when($('button').css({
+                    position: 'relative',
+                    top     : 0,
+                    left    : 0,
+                    zIndex  : 100
+                })).then(function() {
+                    var w = $(window).width();
+                    var h = $(window).height();
+                    $('button').text('We welcome you...');
+                    $('button').width('300');
+                    $('button').off('click').on('click', function() {
+                        $.when($('button').fadeOut('slow')).then(function() {
+                            window.location.reload();
+                        });
+                    });
+                    var $overlay = $('<div/>', {
+                        'id': 'overlay',
+                        css: {
+                            position   : 'absolute',
+                            height     : h + 'px',
+                            width      : w + 'px',
+                            left       : 0,
+                            top        : 0,
+                            background : '#000',
+                            opacity    : 1,
+                            zIndex     : 99,
+                            display    : 'none'
+                        }
+                    });
+                    $.when($overlay.appendTo('body').fadeIn('slow')).then(function() { $('button').fadeIn('slow'); });
+                    // Click overlay to remove
+                    $('#overlay').click(function(){
+                        $(this).remove();
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
