@@ -168,7 +168,8 @@ nav ul li a {
     padding: 20px;
 }
 
-span.question {
+span.question,
+span.section-title {
     font-weight: bold;
     border-bottom: 1px solid #000;
     display: block;
@@ -182,6 +183,29 @@ span.question {
 .container .card.transparent {
     background: transparent;
     box-shadow: none;
+}
+
+#sponsors img {
+    width: 100%;
+}
+
+#team ul {
+    margin-left: 20px;
+}
+
+#team ul li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;   
+}
+
+#team ul li:before {
+    content: "\f005";
+    font-family: 'FontAwesome';
+    margin-right: 10px;
+}
+
+#team .content-padding {
+    padding: 20px;
 }
 
 #footer .shane {
