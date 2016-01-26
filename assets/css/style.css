@@ -126,6 +126,10 @@ nav {
     padding-right: 20px;
 }
 
+nav li {
+    list-style-type: none;
+}
+
 nav a.brand-logo {
     font-family: 'Roboto', sans-serif;
 }
@@ -209,10 +213,10 @@ span.section-title {
 }
 
 #footer .shane {
-    position:fixed;
-    background:rgba(0, 0, 0, 0);
-    width:18%;
-    bottom: -18%; 
+    position: fixed;
+    background: rgba(0, 0, 0, 0);
+    width: 18%;
+    bottom: -28%; 
     height: auto;
 }        
 
@@ -223,12 +227,12 @@ span.section-title {
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
-    position:fixed;
-    background:rgba(0, 0, 0, 0);
-    width:20%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0);
+    width: 20%;
     bottom: -1%; 
     height: auto;
-    right:0%;
+    right: 0%;
 }
 
 div.full-width {
