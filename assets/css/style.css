@@ -13,6 +13,13 @@ body {
 
 body {
     min-height: 100%;
+}
+
+body.blue-bg {
+    background-color: #1a237e;
+}
+
+body.dark-bg {
     background-color: #212121;
 }
 
@@ -25,7 +32,7 @@ body::after {
     right: 0;
     z-index: -1;
     background: url('../img/bg.jpg');
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 ::-webkit-scrollbar {
