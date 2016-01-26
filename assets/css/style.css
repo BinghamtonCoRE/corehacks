@@ -1,0 +1,63 @@
+/*=============================================
+ *   ___     ___ ___ _            _ 
+ *  / __|___| _ \ __| |_  __ _ __| |__ ___
+ * | (__/ _ \   / _|| ' \/ _` / _| / /(_-<
+ *  \___\___/_|_\___|_||_\__,_\__|_\_\/__/
+ *
+===============================================*/
+
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #212121;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: url('../img/bg.jpg');
+    background-size: cover;
+    opacity: 0.2;
+}
+
+div#introText {
+    width: 100%;
+}
+
+div#introText h1,
+div#introText h2 {
+    color: #fff;
+    /*text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);*/
+    font-weight: 300;
+}
+
+div#introText h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 9em;
+}
+
+div#introText h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3em;
+    padding-bottom: 20px;
+}
+
+div#introText button {
+    background: url('../img/okay.png') no-repeat left;
+    padding-left: 70px;
+    background-size: 52px 52px;
+    background-position: 10px 3px;
+    width: 250px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-transform: none;
+    font-size: 28px;
+}
