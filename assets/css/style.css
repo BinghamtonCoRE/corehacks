@@ -64,18 +64,22 @@ div#introText {
 }
 
 div#introText h1,
-div#introText h2 {
+div#introText h2,
+.card h1,
+.card h2 {
     color: #fff;
     font-weight: 300;
 }
 
-div#introText h1 {
+div#introText h1,
+.card h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 9em;
     margin-bottom: 10px;
 }
 
-div#introText h2 {
+div#introText h2,
+.card h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 3em;
     margin-bottom: 60px;
@@ -114,4 +118,14 @@ nav ul li a {
 
 .container .card {
     margin-bottom: 100vh;
+    height: calc(100vh - 200px);
+}
+
+.card.transparent {
+    background: transparent;
+    box-shadow: none;
+}
+
+div.full-width {
+    width: 100%;
 }
