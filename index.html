@@ -1,79 +1,79 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>CoREhacks</title>
-    <meta name="description" content="CoREhacks is an internal CoRE hackathon for members to work on their CoRE projects.">
-    <meta name="author" content="CoREhacks Team">
+    <head>
+        <meta charset="utf-8">
+        <title>CoREhacks</title>
+        <meta name="description" content="CoREhacks is an internal CoRE hackathon for members to work on their CoRE projects.">
+        <meta name="author" content="CoREhacks Team">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- Styles -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css">
 
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico">
-    <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico">
+        <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
 
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-</head>
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
 
-<body class="valign-wrapper">
-    <div id="introText" class="valign center-align">
-        <h1>CoREhacks</h1>
-        <h2>Internal CoRE Hackathon</h2>
-        <button class="btn btn-large waves-effect waves-dark red" type="submit" name="action">One of Us</button>
-    </div>
+    <body class="valign-wrapper">
+        <div id="introText" class="valign center-align">
+            <h1>CoREhacks</h1>
+            <h2>Internal CoRE Hackathon</h2>
+            <button class="btn btn-large waves-effect waves-dark red" type="submit" name="action">One of Us</button>
+        </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('button').click(function() {
-                $('button h1 h2').fadeOut('slow');
-                $.when($('button').css({
-                    position: 'relative',
-                    top     : 0,
-                    left    : 0,
-                    zIndex  : 100
-                })).then(function() {
-                    var w = $(window).width();
-                    var h = $(window).height();
-                    $('button').text('We welcome you...');
-                    $('button').width('300');
-                    $('button').off('click').on('click', function() {
-                        $.when($('button').fadeOut('slow')).then(function() {
-                            window.location.reload();
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('button').click(function() {
+                    $('button h1 h2').fadeOut('slow');
+                    $.when($('button').css({
+                        position: 'relative',
+                        top     : 0,
+                        left    : 0,
+                        zIndex  : 100
+                    })).then(function() {
+                        var w = $(window).width();
+                        var h = $(window).height();
+                        $('button').text('We welcome you...');
+                        $('button').width('300');
+                        $('button').off('click').on('click', function() {
+                            $.when($('button').fadeOut('slow')).then(function() {
+                                window.location.href = 'info.html';
+                            });
                         });
-                    });
-                    var $overlay = $('<div/>', {
-                        'id': 'overlay',
-                        css: {
-                            position   : 'absolute',
-                            height     : h + 'px',
-                            width      : w + 'px',
-                            left       : 0,
-                            top        : 0,
-                            background : '#000',
-                            opacity    : 1,
-                            zIndex     : 99,
-                            display    : 'none'
-                        }
-                    });
-                    $.when($overlay.appendTo('body').fadeIn('slow')).then(function() { $('button').fadeIn('slow'); });
-                    // Click overlay to remove
-                    $('#overlay').click(function(){
-                        $(this).remove();
+                        var $overlay = $('<div/>', {
+                            'id': 'overlay',
+                            css: {
+                                position   : 'absolute',
+                                height     : h + 'px',
+                                width      : w + 'px',
+                                left       : 0,
+                                top        : 0,
+                                background : '#000',
+                                opacity    : 1,
+                                zIndex     : 99,
+                                display    : 'none'
+                            }
+                        });
+                        $.when($overlay.appendTo('body').fadeIn('slow')).then(function() { $('button').fadeIn('slow'); });
+                        // Click overlay to remove
+                        $('#overlay').click(function(){
+                            $(this).remove();
+                        });
                     });
                 });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
