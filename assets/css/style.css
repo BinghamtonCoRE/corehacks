@@ -86,7 +86,7 @@ div#introText h2,
 }
 
 div#introText button,
-div#signup a {
+div#signup button {
     padding-left: 70px;
     width: 250px;
     font-family: 'Roboto', sans-serif;
@@ -96,25 +96,16 @@ div#signup a {
     margin-bottom: 20px;
 }
 
-div#introText button.join {
+button.join {
     background: url('../img/okay.png') no-repeat left;
     background-size: 52px 52px;
     background-position: 10px 3px;
 }
 
-div#introText button.turningBack {
+button.turningBack {
     background: url('../img/turning_back.png') no-repeat left;
     background-size: 52px 52px;
     background-position: 10px 3px;
-}
-
-div#signup a {
-    background: url('../img/turning_back.png') no-repeat left;
-    background-size: 52px 52px;
-    background-position: 10px 3px;
-    width: 500px;
-    margin-top: 50px;
-    font-size: 24px;
 }
 
 div.navbar-fixed {
@@ -139,12 +130,8 @@ nav ul li a {
     font-size: 18px;
 }
 
-.container .card.enableScroll {
-    overflow-y: auto;
-}
-
 .container .card.largeMargin {
-    margin-bottom: 100vh;
+    margin-bottom: 50px;
 }
 
 .container .card.smallMargin {
@@ -162,7 +149,7 @@ nav ul li a {
 }
 
 .container .card {
-    height: calc(100vh - 200px);
+    height: 100%;
     padding: 20px;
 }
 
@@ -233,6 +220,14 @@ span.section-title {
     bottom: -1%; 
     height: auto;
     right: 0%;
+}
+
+#signup {
+    padding: 100px;
+}
+
+#signup h1 {
+    margin-bottom: 50px;
 }
 
 div.full-width {

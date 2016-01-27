@@ -34,7 +34,7 @@
 }
 
 .corner-ribbon.top-right {
-    top: 115px;
+    top: 60px;
     right: -70px;
     left: auto;
     transform: rotate(45deg);

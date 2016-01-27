@@ -9,7 +9,6 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/ribbon.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -26,11 +25,6 @@
     </head>
 
     <body class="dark-bg">
-        <!-- Verfied Banner -->
-        <a href="http://core.binghamton.edu/" target="_blank">
-            <div class="corner-ribbon top-right sticky blue shadow">Powered by CoRE</div>
-        </a>
-
         <!-- Navigation -->
         <div class="navbar-fixed">
             <nav class="purple darken-4">
@@ -56,7 +50,7 @@
                     <div id="home" class="card largeMargin transparent center-align valign-wrapper">
                         <div class="full-width">
                             <h1>CoREhacks</h1>
-                            <h2>Internal CoRE Hackathon</h2>
+                            <h2>February 5-7, 2016</h2>
                             <br />
                             <h2>Brainstorm ideas and <br /> work on CoRE projects!</h2>
                         </div>
@@ -182,7 +176,7 @@
                     <div id="signup" class="card smallMargin transparent center-align valign-wrapper">
                         <div class="full-width">
                             <h1>One of Us</h1>
-                            <a class="btn btn-large waves-effect waves-dark red join" href="http://goo.gl/forms/K0aRSytbDW" name="action">Now there's really no turning back...</a> 
+                            <button class="btn btn-large waves-effect waves-dark red join" type="submit" name="action">Sign Up</button>
                         </div>
                     </div>
                 </div>
@@ -205,6 +199,20 @@
                         scrollTop: $( $.attr(this, 'href') ).offset().top - 131.5
                     }, 500);
                     return false;
+                });
+
+                $('button').click(function() {
+                    $('button').text('Now there\'s really no turning back');
+                    $('button').removeClass('join').addClass('turningBack');
+                    $('button').width('450');
+                    window.setTimeout(function() {
+                        window.location.href = 'http://goo.gl/forms/K0aRSytbDW';
+                    }, 3000);
+                    $('button').off('click').on('click', function() {
+                        $.when($('button').fadeOut('slow')).then(function() {
+                            window.location.href = 'http://goo.gl/forms/K0aRSytbDW';
+                        });
+                    });
                 });
             });
         </script>
