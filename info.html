@@ -226,15 +226,29 @@
                     return false;
                 });
 
-                if (!!Math.floor(Math.random() * 2))
-                {
-                    $('#adSection a').prop('href', 'http://www.twitch.tv/tiredoflosing');
-                    $('#adSection img').prop('src', 'assets/img/sponsors/twitch-ad.png');
-                }
-                else
-                {
-                    $('#adSection a').prop('href', 'https://www.youtube.com/user/gabeochoa');
-                    $('#adSection img').prop('src', 'assets/img/sponsors/corecast-ad.png');
+                var rand = Math.floor(Math.random() * 5);
+
+                switch(rand) {
+                    case 0:
+                        $('#adSection a').prop('href', 'http://www.twitch.tv/tiredoflosing');
+                        $('#adSection img').prop('src', 'assets/img/sponsors/twitch-ad.png');
+                        break;
+                    case 1:
+                        $('#adSection a').prop('href', 'https://www.youtube.com/user/gabeochoa');
+                        $('#adSection img').prop('src', 'assets/img/sponsors/corecast-ad.png');
+                        break;
+                    case 2:
+                        $('#adSection a').prop('href', 'http://core.binghamton.edu/');
+                        $('#adSection img').prop('src', 'assets/img/sponsors/core-website-staff-ad.png');
+                        break;
+                    case 3:
+                        $('#adSection a').prop('href', 'http://core.binghamton.edu/');
+                        $('#adSection img').prop('src', 'assets/img/sponsors/professor-hallfox-ad.png');
+                        break;
+                    case 4:
+                        $('#adSection a').prop('href', 'https://goo.gl/JPkPJ1');
+                        $('#adSection img').prop('src', 'assets/img/sponsors/core-meetings-ad.png');
+                        break;
                 }
 
                 $('button').click(function() {
