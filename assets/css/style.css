@@ -6,6 +6,10 @@
  *
 ===============================================*/
 
+/*===================
+ * General Styles
+=====================*/
+
 html, 
 body {
     height: 100%;
@@ -35,6 +39,8 @@ body::after {
     opacity: 0.3;
 }
 
+/* Scrollbar */
+
 ::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 14px;
@@ -58,6 +64,10 @@ body::after {
 ::-webkit-scrollbar-corner {
     background-color: #e6e6e6;
 }
+
+/*===============
+ * Front Page
+=================*/
 
 div#introText {
     width: 100%;
@@ -96,6 +106,10 @@ div#signup button {
     margin-bottom: 20px;
 }
 
+/*===================
+ * Button Styles
+=====================*/
+
 button.join {
     background: url('../img/okay.png') no-repeat left;
     background-size: 52px 52px;
@@ -107,6 +121,10 @@ button.turningBack {
     background-size: 52px 52px;
     background-position: 10px 3px;
 }
+
+/*===============
+ * Navigation
+=================*/
 
 div.navbar-fixed {
     margin-bottom: 60px;
@@ -130,8 +148,12 @@ nav ul li a {
     font-size: 18px;
 }
 
+/*==============
+ * Main Page
+================*/
+
 .container .card.largeMargin {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .container .card.smallMargin {
@@ -159,14 +181,6 @@ nav ul li a {
     padding: 20px;
 }
 
-span.question,
-span.section-title {
-    font-weight: bold;
-    border-bottom: 1px solid #000;
-    display: block;
-    font-size: 24px;
-}
-
 .container .card .card-title {
     font-size: 3em!important;
 }
@@ -176,28 +190,95 @@ span.section-title {
     box-shadow: none;
 }
 
-#sponsors img {
+div.full-width {
     width: 100%;
 }
 
-#team ul {
+/*================
+ * FAQ Section
+==================*/
+
+span.question,
+span.section-title {
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    display: block;
+    font-size: 24px;
+}
+
+span.section-title {
+    margin-bottom: 20px;
+}
+
+/*===================================
+ * Sponsor and Organizer Listings
+=====================================*/
+
+#sponsors img,
+#organizers img {
+    width: 100%;
+}
+
+#sponsors img.round,
+#organizers img.round {
+    border-radius: 50%;
+    width: 150px;
+}
+
+#sponsors div.name p,
+#organizers div.name p {
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+}
+
+#organizers div.name p {
+    font-size: 24px;    
+}
+
+#sponsors div.addPadding,
+#organizers div.addPadding {
+    margin-bottom: 50px;
+}
+
+#organizers div.addPadding div.col {
+    margin: 20px 0;
+}
+
+#organizers #bannerSection {
+    margin: 20px;
+}
+
+/*===================
+ * Staff Sections
+=====================*/
+
+#judges ul,
+#organizers ul {
     margin-left: 20px;
 }
 
-#team ul li {
+#judges ul li,
+#organizers ul li {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;   
 }
 
-#team ul li:before {
+#judges ul li:before,
+#organizers ul li:before {
     content: "\f005";
     font-family: 'FontAwesome';
     margin-right: 10px;
 }
 
-#team .content-padding {
+#judges .content-padding,
+#organizers .content-padding     {
     padding: 20px;
 }
+
+/*==================
+ * Footer Styles
+====================*/
 
 #footer .shane {
     position: fixed;
@@ -222,6 +303,10 @@ span.section-title {
     right: 0%;
 }
 
+/*===================
+ * Signup Section
+=====================*/
+
 #signup {
     padding: 100px;
 }
@@ -230,22 +315,12 @@ span.section-title {
     margin-bottom: 50px;
 }
 
-#sponsors img.round {
-    border-radius: 50%;
-    width: 150px;
-}
+/*==============
+ * Ad Styles
+================*/
 
-#sponsors div.name p {
-    margin-left: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 28px;
-}
-
-div.addPadding {
-    margin-bottom: 50px;
-}
-
-div#adSection p {
+div#adSection p,
+#organizers p#bannerText {
     width: 150px;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -261,11 +336,12 @@ div#adSection p {
     text-align: center;
 }
 
-div#adSection img {
-    width: 100%;
-    border: 2px solid #000;
+#organizers p#bannerText {
+    width: 300px;
 }
 
-div.full-width {
+div#adSection img,
+img#organizer-banner {
     width: 100%;
+    border: 2px solid #000;
 }
