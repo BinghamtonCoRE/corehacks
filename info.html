@@ -50,8 +50,7 @@
                     <div id="home" class="card largeMargin transparent center-align valign-wrapper">
                         <div class="full-width">
                             <h1>CoREhacks</h1>
-                            <h2>February 5-7, 2016</h2>
-                            <br />
+                            <h2>February 5-7, 2016</h2> 
                             <h2>Brainstorm ideas and <br /> work on CoRE projects!</h2>
                         </div>
                     </div>
@@ -139,6 +138,30 @@
                             <span class="card-title">Sponsors</span>
                             <p>
                                 <img src="assets/img/sponsors/core.png" />
+                                <div class="row addPadding">
+                                    <div class="col s6">
+                                        <div class="valign-wrapper center-align sponsor">
+                                            <img class="round" src="assets/img/sponsors/david.png">
+                                            <div class="valign name">
+                                                <p>David Kueper</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s6">
+                                        <div class="valign-wrapper center-align sponsor">
+                                            <img class="round" src="assets/img/sponsors/carl.png">
+                                            <div class="valign name">
+                                                <p>Carl the Fish</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="adSection">
+                                    <p>Sponsored Ad</p>
+                                    <a href="" target="_blank">
+                                        <img id="adImage" src="" />
+                                    </a>
+                                </div>
                             </p>
                         </div>
                     </div>
@@ -202,6 +225,17 @@
                     }, 500);
                     return false;
                 });
+
+                if (!!Math.floor(Math.random() * 2))
+                {
+                    $('#adSection a').prop('href', 'http://www.twitch.tv/tiredoflosing');
+                    $('#adSection img').prop('src', 'assets/img/sponsors/twitch-ad.png');
+                }
+                else
+                {
+                    $('#adSection a').prop('href', 'https://www.youtube.com/user/gabeochoa');
+                    $('#adSection img').prop('src', 'assets/img/sponsors/corecast-ad.png');
+                }
 
                 $('button').click(function() {
                     $('button').text('Now there\'s really no turning back');

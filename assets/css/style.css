@@ -205,7 +205,7 @@ span.section-title {
     width: 18%;
     bottom: -28%; 
     height: auto;
-}        
+}
 
 #footer .bryan {
     -moz-transform: scaleX(-1);
@@ -228,6 +228,42 @@ span.section-title {
 
 #signup h1 {
     margin-bottom: 50px;
+}
+
+#sponsors img.round {
+    border-radius: 50%;
+    width: 150px;
+}
+
+#sponsors div.name p {
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+}
+
+div.addPadding {
+    margin-bottom: 50px;
+}
+
+div#adSection p {
+    width: 150px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #eee;
+    padding: 2px 5px;
+    text-align: center;
+}
+
+div#adSection img {
+    width: 100%;
+    border: 2px solid #000;
 }
 
 div.full-width {
