@@ -315,6 +315,29 @@ span.section-title {
     margin-bottom: 50px;
 }
 
+/*=====================
+ * Schedule Section
+=======================*/
+
+#schedule ul.collection {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+#schedule ul.collection li.collection-item {
+    font-weight: bold;
+}
+
+#schedule ul.collection li.collection-item .event {
+    font-weight: 300;
+}
+
+
+#schedule .event {
+    float: right;
+    display: inline-block;
+}
+
 /*==============
  * Ad Styles
 ================*/
