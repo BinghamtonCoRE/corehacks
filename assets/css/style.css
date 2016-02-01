@@ -253,6 +253,10 @@ span.section-title {
     margin: 20px 0;
 }
 
+#sponsors .marginFix {
+    margin-left: 120px;
+}
+
 #organizers #bannerSection {
     margin: 20px;
 }
