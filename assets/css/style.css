@@ -198,7 +198,8 @@ div.full-width {
  * Front Page Text
 ======================*/
 
-#home {
+#home,
+#signup {
     height: calc(100vh - 200px)!important;    
 }
 
