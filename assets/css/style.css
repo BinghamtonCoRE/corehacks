@@ -194,6 +194,14 @@ div.full-width {
     width: 100%;
 }
 
+/*====================
+ * Front Page Text
+======================*/
+
+#home {
+    height: calc(100vh - 200px)!important;    
+}
+
 /*================
  * FAQ Section
 ==================*/
@@ -342,7 +350,7 @@ span.section-title {
  * Ad Styles
 ================*/
 
-div#adSection p,
+div#sponsoredBanner p,
 #organizers p#bannerText {
     width: 150px;
     font-family: 'Roboto', sans-serif;
@@ -359,12 +367,16 @@ div#adSection p,
     text-align: center;
 }
 
+div#sponsoredBanner p {
+    position: relative;
+    left: 10%;
+}
+
 #organizers p#bannerText {
     width: 300px;
 }
 
-div#adSection img,
-img#organizer-banner {
-    width: 100%;
+div#sponsoredBanner img {
+    width: 80%;
     border: 2px solid #000;
 }
